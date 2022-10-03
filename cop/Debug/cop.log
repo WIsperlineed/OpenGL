@@ -1,0 +1,11 @@
+﻿E:\Applications\Microsoft Visual Studio\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(cop.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  cop.cpp
+  SHADER_APPLY.cpp
+  texture.cpp
+  tri.cpp
+  三色三角形.cpp
+  颜色变换三角形.cpp
+  正在生成代码...
+  glad.c
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+  cop.vcxproj -> E:\DEV\VS_DEV\cop\Debug\learnopengl.exe
