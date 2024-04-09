@@ -11,11 +11,12 @@
 //const unsigned int SCR_HEIGHT = 600;
 //
 //const char* vertexShaderSource = "#version 330 core\n"
-//"layout (location = 0) in vec3 aPos;\n"
+//"layout (location = 0) in vec3 aPos;\n" 
 //"void main()\n"
 //"{\n"
 //"   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
 //"}\0";
+//
 //const char* fragmentShaderSource = "#version 330 core\n"
 //"out vec4 FragColor;\n"
 //"void main()\n"
@@ -57,6 +58,8 @@
 //    }
 //
 //
+//#pragma region Shader Part
+//
 //    // build and compile our shader program
 //    // ------------------------------------
 //    // vertex shader
@@ -97,23 +100,29 @@
 //    glDeleteShader(vertexShader);
 //    glDeleteShader(fragmentShader);
 //
-//    // set up vertex data (and buffer(s)) and configure vertex attributes
-//    // ------------------------------------------------------------------
+//#pragma endregion
+//
+//
 //    float vertices[] = {
 //        -0.5f, -0.5f, 0.0f, // left  
 //         0.5f, -0.5f, 0.0f, // right 
 //         0.0f,  0.5f, 0.0f  // top   
 //    };
+//    
+//
+//    //VBO对象管理 GPU中存储顶点属性数据（位置，颜色，法线？）的内存=>显存，
 //
 //    unsigned int VBO, VAO;
 //    glGenVertexArrays(1, &VAO);
 //    glGenBuffers(1, &VBO);
-//    // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
+//   
 //    glBindVertexArray(VAO);
-//
+//   
 //    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-//    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 //
+//    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+//    
+//    //这里的0对应着location=0的顶点属性 aPos
 //    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 //    glEnableVertexAttribArray(0);
 //
